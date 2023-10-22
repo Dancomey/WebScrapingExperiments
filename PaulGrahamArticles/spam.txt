@@ -1,0 +1,104 @@
+
+
+Like to build things? Try Hacker
+News.
+
+
+
+
+August 2002(This article describes the spam-filtering techniques
+used in the spamproof web-based mail reader we
+built to exercise Arc. An
+improved algorithm is described in Better
+Bayesian Filtering.)I think it's possible to stop spam, and that 
+content-based filters are the way to do it.
+The Achilles heel of the spammers is their message.
+They can circumvent any other barrier you set up.  They have so far, at
+least.  But they have to deliver their message, whatever it
+is.  If we can write software that recognizes their messages,
+there is no way they can get around that. 
+Like to build things? Try Hacker
+News.
+ 
+(let ((g (* 2 (or (gethash word good) 0)))
+      (b (or (gethash word bad) 0)))
+   (unless (< (+ g b) 5)
+     (max .01
+          (min .99 (float (/ (min 1 (/ b nbad))
+                             (+ (min 1 (/ g ngood))   
+                                (min 1 (/ b nbad)))))))))
+ word good bad ngood nbad good probs 
+(let ((prod (apply #'* probs)))
+  (/ prod (+ prod (apply #'* (mapcar #'(lambda (x) 
+                                         (- 1 x))
+                                     probs)))))
+ 
+Hey there.  Thought you should check out the following:
+http://www.27meg.com/foo
+ 
+qvp0045
+indira
+mx-05
+intimail
+$7500
+freeyankeedom
+cdo
+bluefoxmedia
+jpg
+unsecured
+platinum
+3d0
+qves
+7c5
+7c266675
+ 
+madam           0.99
+promotion       0.99
+republic        0.99
+shortest        0.047225013
+mandatory       0.047225013
+standardization 0.07347802
+sorry           0.08221981
+supported       0.09019077
+people's        0.09019077
+enter           0.9075001
+quality         0.8921298
+organization    0.12454646
+investment      0.8568143
+very            0.14758544
+valuable        0.82347786 
+ 
+perl       0.01
+python     0.01
+tcl        0.01
+scripting  0.01
+morris     0.01
+graham     0.01491078
+guarantee  0.9762507
+cgi        0.9734398
+paul       0.027040077
+quite      0.030676773
+pop3       0.042199217
+various    0.06080265
+prices     0.9359873
+managed    0.06451222
+difficult  0.071706355
+ 
+continuation  0.01
+describe      0.01
+continuations 0.01
+example       0.033600237
+programming   0.05214485 
+i'm           0.055427782
+examples      0.07972858 
+color         0.9189189  
+localhost     0.09883721
+hi            0.116539136
+california    0.84421706
+same          0.15981844
+spot          0.1654587
+us-ascii      0.16804294
+what          0.19212411
+ 
+You'll find this essay and 14 others in
+Hackers & Painters. Plan for Spam FAQ Better Bayesian Filtering Filters that Fight Back Will Filters Kill Spam? Japanese Translation Spanish Translation Chinese Translation Probability Spam is Different Filters vs. Blacklists Trust Metrics Filtering Research Microsoft Patent Slashdot Article The Wrong Way LWN: Filter Comparison CRM114 gets 99.87%  
